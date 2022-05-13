@@ -6,7 +6,7 @@ else{
   $loggedin = false;
 }
 echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#" style="cursor:default">iSecure</a>
+  <a class="navbar-brand" href="#" style="cursor:default">Anonymous ChatRoom</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -14,7 +14,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/loginsystem/welcome.php">Home <span class="sr-only">(current)</span></a>
+        <a  data-toggle="modal" data-target="#AboutModal" type="button" class="nav-link" style="text-decoration: none;" href="#">About</a>
       </li>';
 
       if(!$loggedin){
@@ -27,7 +27,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       }
       if($loggedin){
       echo '<li class="nav-item">
-        <a class="nav-link" href="/loginsystem/logout.php">Logout</a>
+        <a href="#" data-toggle="modal" data-target="#LogoutModal" type="button" class="nav-link" style="text-decoration: none;"> Logout </a>
       </li>';
     }       
       

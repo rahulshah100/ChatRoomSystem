@@ -41,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="icon" type="image/x-icon" href="/loginsystem/images/favicon.png">
     <title>SignUp</title>
     <style>
         @import url('https://rsms.me/inter/inter-ui.css');
@@ -183,7 +183,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     </style>
   </head>
-  <body style="background-color:#e2e2e5">
+  <body style="background-color:#e2e2e5; ">
     <?php require 'partials/_nav.php' ?>
     <?php
     if($showAlert){
@@ -204,7 +204,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     ?>
     
-    <div class="">              
+    <div>              
         <div class="form">
             <!-- <div class="container my-4"> -->
                 <h1 class="text-center">Signup to our website</h1>
@@ -229,8 +229,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <!-- </div> -->
         </div>
     </div>
+    
+    <?php require 'components/Modals.html'?>
 
-        <script>
+    <script>
                 var current = null;
                 document.querySelector('#email').addEventListener('focus', function(e) {
                 if (current) current.pause();
@@ -280,7 +282,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     }
                 });
                 });
-        </script>
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
