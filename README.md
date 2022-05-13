@@ -1,5 +1,5 @@
 # ChatRoomSystem
-SignUp, LogIn, Create a Chat room or Join a room of our site and enjoy your private chat. Do check out our About Page and don't forget to logout after chatting.
+SignUp, LogIn and Create a Chat room... or Join an existing chat room of our system. Check out our About Page and don't forget to logout after having your chat.
 
 Technologies used: Php, Javascript, JQuery. Other Utility: Bootstrap, Html, Css, mysql db.
 
