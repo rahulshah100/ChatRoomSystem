@@ -187,7 +187,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <?php require 'partials/_nav.php' ?>
     <?php
     if($showAlert){
-    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
+    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert" style="position:absolute; top:7.4%; z-index:1;width:100%;">
         <strong>Success!</strong> Your account is now created and you can <a href="/loginsystem/login.php"> login </a> 
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">×</span>
@@ -195,7 +195,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div> ';
     }
     if($showError){
-    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert" style="position:absolute; top:7.4%; z-index:1;width:100%;">
         <strong>Error!</strong> '. $showError.'
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">×</span>
@@ -204,7 +204,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     ?>
     
-    <div>              
+    <div><br>              
         <div class="form">
             <!-- <div class="container my-4"> -->
                 <h1 class="text-center">Signup to our website</h1>

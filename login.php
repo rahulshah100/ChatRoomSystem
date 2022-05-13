@@ -182,7 +182,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <?php require 'partials/_nav.php' ?>
     <?php
     if($login){
-    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin:0px;">
+    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin:0px; position:absolute; top:7.5%; z-index:1;width:100%;">
         <strong>Success!</strong> You are logged in
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -190,7 +190,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div> ';
     }
     if($showError){
-    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin:0px;">
+    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin:0px; position:absolute; top:7.5%; z-index:1;width:100%;">
         <strong>Error!</strong> '. $showError.'
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>

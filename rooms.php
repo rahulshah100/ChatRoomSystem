@@ -185,13 +185,22 @@ else{
             margin-left:auto !important;
             margin-right:auto !important;
         }
+        
+        #goback:hover{
+            text-shadow: 1px 1px grey;
+        }
     </style>
 </head>
 
 <body>
     <?php require 'partials/_nav.php' ?>
-    <h2 class="midsize" style="margin-top:2%; margin-bottom:3%;">Chat Room - <?php echo $roomname; ?></h2>
-
+    <h2 class="midsize" style="margin-top:2%; margin-bottom:3%;">
+        <?php 
+        echo "<span style=''>".ucfirst($_SESSION['username']).",</span>"
+        ?>       
+        welcome to Chat Room - <?php echo $roomname; ?>  
+    </h2>    
+    
     <div class="container midsize" style="box-shadow: 4px 2px 28px 1px grey; color: blue;">
         <div class="anyClass"></div>
     </div>
@@ -200,6 +209,8 @@ else{
         <input type="text" class="form-control" name="usermsg" id="usermsg" placeholder="Add message" style="margin-right:2%;">
         <button type="button" class="btn btn-success" name="submitmsg" id="submitmsg">Send</button>
     </div>
+
+    <span><a href="welcome.php" id="goback" style="position: absolute; bottom:5%; right:10%; text-decoration: none !important; color:black;"> &larr; Go back to the Home Page </a></span> 
 
     <?php require 'components/Modals.html'?>
     

@@ -5,6 +5,29 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
     header("location: login.php");
     exit;
 }
+
+if(isset($_POST['room2'])){ //checks if it is a post reques to the page and whether room2 has been set
+    $room2 = $_POST['room2'];
+
+    include 'partials/_dbconnect.php';
+
+    $sql="SELECT * FROM `rooms` WHERE roomname='$room2'";
+    $result = mysqli_query($conn, $sql);
+
+    if($result){
+        if(mysqli_num_rows($result)==1){
+            echo "<script>";
+            echo 'window.location="http://localhost/loginsystem/rooms.php?roomname='.$room2.'";';
+            echo '</script>';
+        }
+        else{
+            $message="Room Does Not Exist";
+            echo "<script>";
+            echo 'alert("'.$message.'");';
+            echo '</script>';
+        }
+    }
+}
 ?>
 
 <!doctype html>
@@ -113,20 +136,25 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
         <div class="position-relative overflow-hidden p-0 p-md-5 text-center bg-light">
             <div class="col-md-8 p-lg-5 mx-auto my-5">
             <h1 class="display-4 fw-normal">Welcome - <?php echo $_SESSION['username']?></h1>
-            <p class="lead fw-normal">Here you can create a Chatroom and share its link. <br> 
-            <form action="claim.php" method="post">
-                    http://localhost/loginsystem/ <input type="text" name="room">
-                    <button class="btn btn-outline-secondary" href="#">Claim Room</button>
-                </form>
-             <hr> </p> <br> <br>
+            <p class="lead fw-normal">Here you can create a Chatroom and share its ID. <br> Or join an existing Chatroom by pasting its ID.
+            <br>
+            <form action="claim.php" method="post" style="text-align:right;margin-right:6%;">
+                    http://localhost/loginsystem/ <input type="text" name="room" placeholder="Room's ID">
+                    <button class="btn btn-outline-secondary" href="#">Claim a Room</button>
+                    <br>                
+            </form>
+            <form action="welcome.php" method="post" class="mt-2">
+                    http://localhost/loginsystem/ <input type="text" name="room2" placeholder="Existing Room's ID">
+                    <button class="btn btn-outline-secondary" href="#">Join a Room</button>
+            </form>
+            <hr> </p> <br> <br>
             <p class="mb-0">                
                 <i> Whenever you need to, be sure to 
                     <a href="#" data-toggle="modal" data-target="#LogoutModal" type="button"> logout.</a>
                 </i>
             </p>
             </div>
-            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-            
+            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>            
         </div>
     </main>
 
