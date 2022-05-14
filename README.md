@@ -1,8 +1,6 @@
 
 # ChatRoomSystem
 
-A brief description of what this project does and who it's for
-
 SignUp, LogIn and Create a Chat room... or Join an existing chat room of our system. Check out our About Page and don't forget to logout after having your chat.
 
 Technologies used: Php, Javascript, JQuery. Other Utility: Bootstrap, Html, Css, mysql db.
