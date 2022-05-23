@@ -1,5 +1,5 @@
 # ChatRoomSystem
-Hosted at [(http://letschat.social)]((http://letschat.social/))
+Hosted at: [(http://letschat.social)](http://letschat.social/)
 
 SignUp, LogIn and Create a Chat room... or Join an existing chat room of our system. Check out our About Page and don't forget to logout after having your chat.
 
