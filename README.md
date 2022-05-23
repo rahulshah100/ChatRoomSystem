@@ -1,5 +1,5 @@
 
-hosted at: letschat.social
+[Hosted at:](letschat.social)
 
 # ChatRoomSystem
 
