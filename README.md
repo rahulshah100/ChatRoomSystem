@@ -1,5 +1,5 @@
 
-Hosted at: [letschat.social](http://www.letschat.social)
+Hosted at: [letschat.social](http://www.letschat.social){:target="_blank"}
 
 # ChatRoomSystem
 
@@ -22,8 +22,8 @@ Steps to replicate the project: <li>Install XAMPP.</li><li>In htdocs, create a f
 
 ## Acknowledgements
 
- - [PHP: Documentation](https://www.php.net/docs.php)
- - [PHP Tutorial](https://www.w3schools.com/php/)
+ - [PHP: Documentation](https://www.php.net/docs.php){:target="_blank"}
+ - [PHP Tutorial](https://www.w3schools.com/php/){:target="_blank"}
 
 
 ## Support
