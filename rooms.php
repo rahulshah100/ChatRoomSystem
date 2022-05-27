@@ -191,7 +191,7 @@ else{
         }
         
         .maintxt{
-            zoom:0.75;
+            zoom:0.90;
         }
     </style>
 </head>
