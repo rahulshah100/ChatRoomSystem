@@ -126,7 +126,7 @@ if(isset($_POST['room2'])){ //checks if it is a post reques to the page and whet
         }
         
         .maintxt{
-            zoom:0.7;
+            zoom:0.85;
         }
     </style>
     <title>Welcome - <?php echo $_SESSION['username']?></title>
