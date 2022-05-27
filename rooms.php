@@ -189,10 +189,15 @@ else{
         #goback:hover{
             text-shadow: 1px 1px grey;
         }
+        
+        .maintxt{
+            zoom:0.75;
+        }
     </style>
 </head>
 
 <body>
+   <div class="maintxt"> 
     <?php require 'partials/_nav.php' ?>
     <h2 class="midsize" style="margin-top:2%; margin-bottom:3%;">
         <?php 
@@ -261,5 +266,6 @@ else{
                 )
             }
     </script>
+   </div>
 </body>
 </html>
